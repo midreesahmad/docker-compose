@@ -1,0 +1,10 @@
+services:
+  hello-world-cont1:
+    build:
+      context: .
+  hello-world-cont2:
+    build:
+      context: .
+  hello-world-cont3:
+    build:
+      context: .
