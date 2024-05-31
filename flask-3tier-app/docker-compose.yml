@@ -1,0 +1,24 @@
+# networks:
+#   my-app-net:  # Correct network name (lowercase with hyphens)
+#     external: true 
+
+services:
+  app:
+    build: .
+    container_name: flask-three-tier-app
+    ports:
+      - 5000:5000
+    volumes:
+      - ./static:/app/static:ro
+      - ./db:/app/db  
+    environment:
+      - FLASK_APP=main.py
+      - FLASK_ENV=development
+      - FLASK_DEBUG=true  
+    # networks:
+    #   my-app-net:
+    #     aliases:  # Use network aliases for fixed IP assignment
+    #       - 172.24.0.2
+volumes:
+  app_db:
+

@@ -11,6 +11,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - node-app-database:/data/db
   mongo-express: 
     image: mongo-express
     ports:
@@ -20,3 +22,5 @@ services:
       - ME_CONFIG_MONGODB_ADMINPASSWORD=password
       - ME_CONFIG_MONGODB_SERVER=mongodb
 
+volumes:
+    node-app-database:

@@ -1,0 +1,4 @@
+This is 3-layer application which contains
+	==>	Front-end (contains three pages home, register and login)
+	==>	Back-end that will contain database
+	==>	Database (sqlite )
